@@ -80,11 +80,13 @@
      <Compile Include="Assets\Assets\codigos\render.cs" />
      <Compile Include="Assets\Assets\codigos\rotaY.cs" />
      <Compile Include="Assets\Assets\codigos\rotar.cs" />
+     <Compile Include="Assets\Assets\codigos\rotar_x.cs" />
      <Compile Include="Assets\Assets\codigos\rotaz.cs" />
      <Compile Include="Assets\Assets\codigos\seguir.cs" />
      <Compile Include="Assets\Assets\codigos\shooteralien2.cs" />
      <Compile Include="Assets\Assets\codigos\siguealanavelento.cs" />
      <Compile Include="Assets\Assets\codigos\superbala.cs" />
+     <Compile Include="Assets\Assets\codigos\textohistoria.cs" />
      <Compile Include="Assets\Assets\codigos\ui.cs" />
      <Compile Include="Assets\Assets\codigos\velocidadbarranueva.cs" />
      <Compile Include="Assets\iconos\canvas.cs" />
