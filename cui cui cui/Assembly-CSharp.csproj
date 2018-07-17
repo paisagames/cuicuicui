@@ -56,6 +56,7 @@
      <Compile Include="Assets\Assets\codigos\balaalienanave.cs" />
      <Compile Include="Assets\Assets\codigos\canvascode.cs" />
      <Compile Include="Assets\Assets\codigos\cargando.cs" />
+     <Compile Include="Assets\Assets\codigos\copiarotacion.cs" />
      <Compile Include="Assets\Assets\codigos\corrigecorazon.cs" />
      <Compile Include="Assets\Assets\codigos\corrigeposition.cs" />
      <Compile Include="Assets\Assets\codigos\corrigeposition1.cs" />
@@ -74,6 +75,7 @@
      <Compile Include="Assets\Assets\codigos\muerebola.cs" />
      <Compile Include="Assets\Assets\codigos\mueveasteroide.cs" />
      <Compile Include="Assets\Assets\codigos\mueveydispara.cs" />
+     <Compile Include="Assets\Assets\codigos\nivel2.cs" />
      <Compile Include="Assets\Assets\codigos\nuevoUI.cs" />
      <Compile Include="Assets\Assets\codigos\render.cs" />
      <Compile Include="Assets\Assets\codigos\rotaY.cs" />

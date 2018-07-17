@@ -1,16 +1,17 @@
 fileFormatVersion: 2
-guid: 15b530cb13e49b44bbdd6d282de85cb5
-timeCreated: 1530572069
+guid: 6b85cdbc83708094ca022f0234863b6d
+timeCreated: 1531804180
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pSphere1
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Star001
-    9500000: //RootNode
+    400002: pSphere1
+    2300000: pSphere1
+    3300000: pSphere1
+    4300000: pSphere1
   materials:
     importMaterials: 1
     materialName: 0
@@ -75,7 +76,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
