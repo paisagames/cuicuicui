@@ -17,8 +17,8 @@ public Transform esfera;
 		if(globalvariables.puntos>=20){
 			MeshRenderer mesh= esfera.GetComponent<MeshRenderer>();
 			mesh.material=material2;
-			mesh.materials[0]=material2;
-			mesh.materials[1]=material2;
+			//mesh.materials[0]=material2;
+			//mesh.materials[1]=material2;
 		}
 		if(Input.GetKeyDown(KeyCode.N)){
 			globalvariables.puntos++;

@@ -9,8 +9,8 @@ using UnityEngine.SceneManagement;
 public class ui : MonoBehaviour {
 
 	public Image fondiux;
-	public Image touchleft;
-	public Image touchright;
+	//public Image touchleft;
+	//public Image touchright;
 
 public Image imagenvida;
 
@@ -31,9 +31,9 @@ public Button pausebutton;
 	
 	public Text starttext;
 
-	public Button instruccionesbuton;
-	public Image instruccionesimagge;
-	public Text instruccionestext;
+	//public Button instruccionesbuton;
+	//public Image instruccionesimagge;
+	//public Text instruccionestext;
 
 	public Button sonidobuton;
 	public Image sonidoimage;
@@ -82,8 +82,8 @@ public Button pausebutton;
 
 				booltiempo=false;
 				doubletiempo=0;
-				touchleft.enabled=false;
-				touchright.enabled=false;
+				//touchleft.enabled=false;
+				//touchright.enabled=false;
 			}
 		}
 		
@@ -104,12 +104,12 @@ public Button pausebutton;
 		sonidobuton.enabled=false;
 		sonidoimage.enabled=false;
 		sonidotext.enabled=false;
-		instruccionesbuton.enabled=false;
-		instruccionesimagge.enabled=false;
-		instruccionestext.enabled=false;
+		//instruccionesbuton.enabled=false;
+		//instruccionesimagge.enabled=false;
+		//instruccionestext.enabled=false;
 
-		touchleft.enabled=true;
-		touchright.enabled=true;
+		//touchleft.enabled=true;
+		//touchright.enabled=true;
 		booltiempo=true;
 		
 
@@ -170,9 +170,9 @@ public Button pausebutton;
 //		menu2i.enabled=false;
 //		menu2t.enabled=false;
 		globalvariables.velocidad=0.2f;
-		instruccionesbuton.enabled=false;
-		instruccionesimagge.enabled=false;
-		instruccionestext.enabled=false;
+		//instruccionesbuton.enabled=false;
+		//instruccionesimagge.enabled=false;
+		//instruccionestext.enabled=false;
 		sonidobuton.enabled=false;
 		sonidoimage.enabled=false;
 		sonidotext.enabled=false;
@@ -180,8 +180,8 @@ public Button pausebutton;
 		pausaimageoriginal.enabled=true;
 		playimagenoriginal.enabled=false;
 		plaubutton.enabled=false;
-		touchleft.enabled=true;
-		touchright.enabled=true;
+		//touchleft.enabled=true;
+		//touchright.enabled=true;
 		booltiempo=true;
 	}
 	public void menup(){
@@ -198,9 +198,9 @@ public void playm(){
 		sonidobuton.enabled=false;
 		sonidoimage.enabled=false;
 		sonidotext.enabled=false;
-		instruccionesbuton.enabled=false;
-		instruccionesimagge.enabled=false;
-		instruccionestext.enabled=false;
+		//instruccionesbuton.enabled=false;
+		//instruccionesimagge.enabled=false;
+		//instruccionestext.enabled=false;
 		pausabool=false;
 		globalvariables.velocidad=globalvariables.velocidadguardada;
 		
@@ -225,9 +225,9 @@ public void playm(){
 		sonidobuton.enabled=true;
 		sonidoimage.enabled=true;
 		sonidotext.enabled=true;
-		instruccionesbuton.enabled=true;
-		instruccionesimagge.enabled=true;
-		instruccionestext.enabled=true;
+		//instruccionesbuton.enabled=true;
+		//instruccionesimagge.enabled=true;
+		//instruccionestext.enabled=true;
 		pausabool=true;
 		
 		pausaimageoriginal.enabled=false;

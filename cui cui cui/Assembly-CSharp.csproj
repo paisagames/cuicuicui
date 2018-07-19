@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Assets 1\Prefabs\ventana.cs" />
      <Compile Include="Assets\Assets 1\Scripts\RandomRotator.cs" />
+     <Compile Include="Assets\Assets\UI\touch.cs" />
      <Compile Include="Assets\Assets\codigos\altura.cs" />
      <Compile Include="Assets\Assets\codigos\avanza.cs" />
      <Compile Include="Assets\Assets\codigos\avanza2.cs" />
@@ -60,7 +61,6 @@
      <Compile Include="Assets\Assets\codigos\corrigecorazon.cs" />
      <Compile Include="Assets\Assets\codigos\corrigeposition.cs" />
      <Compile Include="Assets\Assets\codigos\corrigeposition1.cs" />
-     <Compile Include="Assets\Assets\codigos\desaparecelo.cs" />
      <Compile Include="Assets\Assets\codigos\detectanave.cs" />
      <Compile Include="Assets\Assets\codigos\disparaCorrected.cs" />
      <Compile Include="Assets\Assets\codigos\disparaalienN.cs" />
