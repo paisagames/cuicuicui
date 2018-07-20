@@ -49,6 +49,7 @@
      <Compile Include="Assets\Assets 1\Prefabs\ventana.cs" />
      <Compile Include="Assets\Assets 1\Scripts\RandomRotator.cs" />
      <Compile Include="Assets\Assets\UI\touch.cs" />
+     <Compile Include="Assets\Assets\codigos\UI19.cs" />
      <Compile Include="Assets\Assets\codigos\altura.cs" />
      <Compile Include="Assets\Assets\codigos\avanza.cs" />
      <Compile Include="Assets\Assets\codigos\avanza2.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\Assets\codigos\detectanave.cs" />
      <Compile Include="Assets\Assets\codigos\disparaCorrected.cs" />
      <Compile Include="Assets\Assets\codigos\disparaalienN.cs" />
+     <Compile Include="Assets\Assets\codigos\firstloading.cs" />
      <Compile Include="Assets\Assets\codigos\gameover.cs" />
      <Compile Include="Assets\Assets\codigos\globalvariables.cs" />
      <Compile Include="Assets\Assets\codigos\imagenvelocidad.cs" />
@@ -88,6 +90,7 @@
      <Compile Include="Assets\Assets\codigos\superbala.cs" />
      <Compile Include="Assets\Assets\codigos\textohistoria.cs" />
      <Compile Include="Assets\Assets\codigos\ui.cs" />
+     <Compile Include="Assets\Assets\codigos\uivideo.cs" />
      <Compile Include="Assets\Assets\codigos\velocidadbarranueva.cs" />
      <Compile Include="Assets\iconos\canvas.cs" />
  <Reference Include="Facebook.Unity.Settings">

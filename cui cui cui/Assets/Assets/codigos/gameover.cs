@@ -34,4 +34,9 @@ public class gameover : MonoBehaviour {
 		avanza.vida=100f;
 
 	}
+	public void menum(){
+		avanza.vida=100f;
+		SceneManager.LoadScene("menu");
+		
+	}
 }

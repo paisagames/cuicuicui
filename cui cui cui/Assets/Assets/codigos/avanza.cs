@@ -44,7 +44,7 @@ public class avanza : MonoBehaviour {
 		globalvariables.gameOn=false;
 		globalvariables.puntos=0;
 		globalvariables.velocidad=0.00f; //0.05f
-		vel.text=""+(globalvariables.velocidad*1000)+"km/h" +"--"+ vida +"%";
+//		vel.text=""+(globalvariables.velocidad*1000)+"km/h" +"--"+ vida +"%";
 		
 	}
 	
@@ -84,7 +84,7 @@ public class avanza : MonoBehaviour {
 
 
 		//transform.Translate(0,0,globalvariables.velocidad);
-		vel.text=""+(globalvariables.velocidad*1000)+"km/h" +"--"+ vida +"%";
+//		vel.text=""+(globalvariables.velocidad*1000)+"km/h" +"--"+ vida +"%";
 		textpuntos.text=""+globalvariables.puntos;
 		textmaxpunt.text="MAX:"+PlayerPrefs.GetInt("max");
 	}
@@ -94,9 +94,13 @@ public class avanza : MonoBehaviour {
 			other.transform.position=new Vector3(Random.Range(transform.position.x-0.4f,transform.position.x+0.4f),Random.Range(0f,10f),transform.position.z-120f);
 			globalvariables.puntos++;
 			textpuntos.text=""+globalvariables.puntos;
+
+			if(globalvariables.velocidad<2.5f){
 			globalvariables.velocidad=globalvariables.velocidad*1.25f; //.04f
+			}
 			
-			vel.text=""+(globalvariables.velocidad*1000)+"km/h" +"--"+ vida +"%";
+			
+//			vel.text=""+(globalvariables.velocidad*1000)+"km/h" +"--"+ vida +"%";
 			mueveydispara mueveydispara=new mueveydispara();
 			mueveydispara.cargabalas();
 			if(globalvariables.sonidoactivadobool==true){
@@ -110,7 +114,7 @@ public class avanza : MonoBehaviour {
 		}
 		if(other.tag=="balaalien"){
 		//	vida-=40f;
-			imagenvida.rectTransform.sizeDelta = new Vector2(vida, 100f);
+//			imagenvida.rectTransform.sizeDelta = new Vector2(vida, 100f);
 			avionmeshrender.material=redmaterial;
 			avionherido=true;
 			
@@ -118,11 +122,11 @@ public class avanza : MonoBehaviour {
 		}
 
 		if(other.tag=="bola"){
-			vida-=30f;
+			vida-=20f;
 			globalvariables.velocidad=0f;
 			other.transform.position=new Vector3(Random.Range(-2f,20f),Random.Range(0f,10f),transform.position.z-120f);
-			imagenvida.rectTransform.sizeDelta = new Vector2(vida, 100f);
-				vel.text=""+(globalvariables.velocidad*1200)+"km/h" +"--"+ vida +"%";
+//			imagenvida.rectTransform.sizeDelta = new Vector2(vida, 100f);
+//				vel.text=""+(globalvariables.velocidad*1200)+"km/h" +"--"+ vida +"%";
 				if(globalvariables.sonidoactivadobool==true){
 			sonidopiedra.Play();}
 
@@ -137,8 +141,8 @@ public class avanza : MonoBehaviour {
 
 			vida+=50f;
 			if(vida>=100f){vida=100f;}
-			imagenvida.rectTransform.sizeDelta = new Vector2(vida, 100f);
-			vel.text=""+(globalvariables.velocidad*1000)+"km/h" +"--"+ vida +"%";
+//			imagenvida.rectTransform.sizeDelta = new Vector2(vida, 100f);
+//			vel.text=""+(globalvariables.velocidad*1000)+"km/h" +"--"+ vida +"%";
 		}
 		if(vida<0f){vida=0f;globalvariables.gameOn=false;}
 

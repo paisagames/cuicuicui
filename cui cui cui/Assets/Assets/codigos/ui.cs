@@ -12,7 +12,7 @@ public class ui : MonoBehaviour {
 	//public Image touchleft;
 	//public Image touchright;
 
-public Image imagenvida;
+//public Image imagenvida;
 
 public AudioSource sonidomusica;
 public AudioSource disparosonido;
@@ -98,9 +98,9 @@ public Button pausebutton;
 		pausabool=true;
 		globalvariables.velocidad=0.7f;
 		globalvariables.gameOn=true;
-		startbuton.enabled=false;
-		startimage.enabled=false;
-		starttext.enabled=false;
+//		startbuton.enabled=false;
+//		startimage.enabled=false;
+//		starttext.enabled=false;
 		sonidobuton.enabled=false;
 		sonidoimage.enabled=false;
 		sonidotext.enabled=false;
@@ -156,7 +156,7 @@ public Button pausebutton;
 		avanza.vida=100f;
 		
 
-		imagenvida.rectTransform.sizeDelta = new Vector2(avanza.vida, 100f);
+		//imagenvida.rectTransform.sizeDelta = new Vector2(avanza.vida, 100f);
 		globalvariables.shooteralien=false;
 		
 		muerealien.restartbool=true;
