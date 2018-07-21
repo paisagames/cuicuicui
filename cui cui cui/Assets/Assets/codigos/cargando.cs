@@ -13,6 +13,9 @@ public class cargando : MonoBehaviour {
 	public Text text3;
 	public Image imagen1;
 	public Image imagen2;
+
+	public Image storeimg;
+	public Text textstore;
 	
 
 	// Use this for initialization
@@ -33,6 +36,8 @@ public class cargando : MonoBehaviour {
 		
 	}
 	public void cargaahora(){
+		storeimg.enabled=false;
+		textstore.enabled=false;
 		text1.enabled=false;
 		text2.enabled=false;
 		text3.enabled=false;
@@ -40,6 +45,8 @@ public class cargando : MonoBehaviour {
 		imagen2.enabled=false;
 		cargandoimg.enabled=true;
 		tiempobool=true;
+		
+
 	}
 
 	

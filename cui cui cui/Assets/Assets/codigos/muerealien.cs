@@ -92,8 +92,14 @@ public class muerealien : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other){
 		if(other.tag=="bala"){
+
+		float armo=0f;
+		if(PlayerPrefs.HasKey("armo")){
+		armo=PlayerPrefs.GetFloat("armo");
+		}
 		//transform.position=new Vector3(Random.Range(-2f,20f),Random.Range(0f,10f),other.transform.position.z-20f);
 			vidaalien--;
+			vidaalien-=armo;
 			
 			cubovida.transform.localScale=new Vector3((vidaalien*0.1f)/13,0.2f,0.001f);
 

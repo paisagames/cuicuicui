@@ -47,7 +47,7 @@ public class touch : MonoBehaviour {
 	// Use this for initialization
 	public void Start () {
 		direccionanterior="0";
-		valorinicial=0.03f;
+		valorinicial=0.05f;//0.03f
 		tocando=false;
 		//principal.position = new Vector3 (1.53f, 4.22f, -0.448f);
 		x = 0;

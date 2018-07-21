@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class globalvariables : object {
-
+public static int prueba;
 public static bool shootalienactivo;	
+public static int newstars;
+	public static int level;
 	public static bool puededisparar;
 	public static float nbalas;
 	public static float velocidad;

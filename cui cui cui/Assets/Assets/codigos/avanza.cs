@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class avanza : MonoBehaviour {
 
+	int privado;
 	bool avionherido;
 	public MeshRenderer avionmeshrender;
 	public Material redmaterial;
@@ -15,19 +16,26 @@ public class avanza : MonoBehaviour {
 
 	public AudioSource sonidohealth;
 	public static float vida=100f;
-	public Image imagenvida;
+
 
 	double tiempomateriales;
 	public Transform empty;
 		int maxpunt;
 		public Text textpuntos;
-		public Text vel;
+		
 		
 		public static float velocidad;
 		double tiempoajuste;
 		float posicionZ;
 	// Use this for initialization
 	void Start () {
+	if(PlayerPrefs.HasKey("vida")){
+			avanza.vida+=PlayerPrefs.GetFloat("vida");
+		}
+
+		privado=0;
+		globalvariables.newstars=0;	
+		globalvariables.prueba=0;
 		avionherido=false;
 		tiempomateriales=0;
 		posicionZ=transform.localPosition.z;
@@ -61,9 +69,7 @@ public class avanza : MonoBehaviour {
 			globalvariables.velocidad=0;
 		}
 
-		if(Input.GetKeyDown(KeyCode.K)){
-			globalvariables.puntos++;
-		}
+		
 		//ajusta la nave en z
 		tiempoajuste=tiempoajuste+Time.time;
 
@@ -85,15 +91,26 @@ public class avanza : MonoBehaviour {
 
 		//transform.Translate(0,0,globalvariables.velocidad);
 //		vel.text=""+(globalvariables.velocidad*1000)+"km/h" +"--"+ vida +"%";
-		textpuntos.text=""+globalvariables.puntos;
+		//textpuntos.text=""+globalvariables.newstars+"ff"+privado;
 		textmaxpunt.text="MAX:"+PlayerPrefs.GetInt("max");
 	}
 
 	void OnTriggerEnter(Collider other){
-		if(other.tag=="star"){
+		if(other.tag=="otro"){
+			other.transform.position=new Vector3(10000f,1000f,1000f);
+			privado++;
+			
+
+
+		}
+
+
+		/*if(other.tag=="star"){ 
 			other.transform.position=new Vector3(Random.Range(transform.position.x-0.4f,transform.position.x+0.4f),Random.Range(0f,10f),transform.position.z-120f);
-			globalvariables.puntos++;
-			textpuntos.text=""+globalvariables.puntos;
+			//globalvariables.puntos++;
+			globalvariables.newstars++;
+			textpuntos.text=""+globalvariables.newstars+"ff";
+			
 
 			if(globalvariables.velocidad<2.5f){
 			globalvariables.velocidad=globalvariables.velocidad*1.25f; //.04f
@@ -106,12 +123,14 @@ public class avanza : MonoBehaviour {
 			if(globalvariables.sonidoactivadobool==true){
 			sonidostrella.Play();}
 
+				globalvariables.puntos++;
 			if(globalvariables.puntos>PlayerPrefs.GetInt("max")){
 				PlayerPrefs.SetInt("max",globalvariables.puntos);
-			}
+			}	
+			
 
 
-		}
+		}*/
 		if(other.tag=="balaalien"){
 		//	vida-=40f;
 //			imagenvida.rectTransform.sizeDelta = new Vector2(vida, 100f);

@@ -20,9 +20,19 @@ public class gameover : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	if(avanza.vida<=0f){
+		if(PlayerPrefs.HasKey("stars")){
+				int stars=PlayerPrefs.GetInt("stars");
+				stars=stars+globalvariables.puntos;
+				PlayerPrefs.SetInt("stars",stars);
+				SceneManager.LoadScene("loose");
+				avanza.vida=10f;
+		}else{
+			PlayerPrefs.SetInt("stars",globalvariables.puntos);
+				SceneManager.LoadScene("loose");
+				avanza.vida=10f;
+			}
 		
-		SceneManager.LoadScene("loose");
-		avanza.vida=10f;
+
 		//menui.enabled=true;
 		//menut.enabled=true;
 

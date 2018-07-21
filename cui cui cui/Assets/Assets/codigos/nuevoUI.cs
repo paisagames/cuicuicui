@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class nuevoUI : MonoBehaviour {
 	public Text sonido;
+	public Text textostrellas;
 	
 
 	// Use this for initialization
@@ -16,6 +17,12 @@ public class nuevoUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(PlayerPrefs.HasKey("stars")){
+				textostrellas.text="Stars:"+PlayerPrefs.GetInt("stars");
+		}else{
+			PlayerPrefs.SetInt("stars",0);
+				
+			}
 		
 	}
 	public void iniciarjuego(){

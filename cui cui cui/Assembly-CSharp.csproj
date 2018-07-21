@@ -53,10 +53,11 @@
      <Compile Include="Assets\Assets\codigos\altura.cs" />
      <Compile Include="Assets\Assets\codigos\avanza.cs" />
      <Compile Include="Assets\Assets\codigos\avanza2.cs" />
-     <Compile Include="Assets\Assets\codigos\balaalien.cs" />
+     <Compile Include="Assets\Assets\codigos\avanza3.cs" />
      <Compile Include="Assets\Assets\codigos\balaalienN.cs" />
      <Compile Include="Assets\Assets\codigos\balaalienanave.cs" />
      <Compile Include="Assets\Assets\codigos\canvascode.cs" />
+     <Compile Include="Assets\Assets\codigos\canvascode2.cs" />
      <Compile Include="Assets\Assets\codigos\cargando.cs" />
      <Compile Include="Assets\Assets\codigos\copiarotacion.cs" />
      <Compile Include="Assets\Assets\codigos\corrigecorazon.cs" />
@@ -64,10 +65,10 @@
      <Compile Include="Assets\Assets\codigos\corrigeposition1.cs" />
      <Compile Include="Assets\Assets\codigos\detectanave.cs" />
      <Compile Include="Assets\Assets\codigos\disparaCorrected.cs" />
-     <Compile Include="Assets\Assets\codigos\disparaalienN.cs" />
      <Compile Include="Assets\Assets\codigos\firstloading.cs" />
      <Compile Include="Assets\Assets\codigos\gameover.cs" />
      <Compile Include="Assets\Assets\codigos\globalvariables.cs" />
+     <Compile Include="Assets\Assets\codigos\gomenu.cs" />
      <Compile Include="Assets\Assets\codigos\imagenvelocidad.cs" />
      <Compile Include="Assets\Assets\codigos\kepedo.cs" />
      <Compile Include="Assets\Assets\codigos\lookat.cs" />
@@ -89,6 +90,7 @@
      <Compile Include="Assets\Assets\codigos\siguealanavelento.cs" />
      <Compile Include="Assets\Assets\codigos\superbala.cs" />
      <Compile Include="Assets\Assets\codigos\textohistoria.cs" />
+     <Compile Include="Assets\Assets\codigos\tienda.cs" />
      <Compile Include="Assets\Assets\codigos\ui.cs" />
      <Compile Include="Assets\Assets\codigos\uivideo.cs" />
      <Compile Include="Assets\Assets\codigos\velocidadbarranueva.cs" />

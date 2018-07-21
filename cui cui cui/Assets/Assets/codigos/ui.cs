@@ -26,10 +26,10 @@ public Button pausebutton;
 	public Sprite imagenpausa;	
 	public Sprite imagenplay;
 	bool pausabool;
-	public Button startbuton;
-	public Image startimage;
+	//public Button startbuton;
+	//public Image startimage;
 	
-	public Text starttext;
+	//public Text starttext;
 
 	//public Button instruccionesbuton;
 	//public Image instruccionesimagge;
@@ -153,7 +153,11 @@ public Button pausebutton;
 		pausabool=false;
 		globalvariables.pausado=false;
 		globalvariables.nbalas=30;
+	
 		avanza.vida=100f;
+		if(PlayerPrefs.HasKey("vida")){
+			avanza.vida+=PlayerPrefs.GetFloat("vida");
+		}
 		
 
 		//imagenvida.rectTransform.sizeDelta = new Vector2(avanza.vida, 100f);
@@ -208,6 +212,10 @@ public void playm(){
 		pausaimageoriginal.enabled=true;
 		playimagenoriginal.enabled=false;
 		plaubutton.enabled=false;
+
+		menu2b.enabled=false;
+		menu2i.enabled=false;
+		menu2t.enabled=false;
 		globalvariables.pausado=false;
 
 
@@ -229,6 +237,9 @@ public void playm(){
 		//instruccionesimagge.enabled=true;
 		//instruccionestext.enabled=true;
 		pausabool=true;
+		menu2b.enabled=true;
+		menu2i.enabled=true;
+		menu2t.enabled=true;
 		
 		pausaimageoriginal.enabled=false;
 		playimagenoriginal.enabled=true;

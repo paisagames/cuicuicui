@@ -166,6 +166,9 @@ public class mueveydispara : MonoBehaviour {
 		
 	}
 	public void dispara(){
+		//nbalas es float
+	
+
 		if(globalvariables.nbalas>0&&globalvariables.puededisparar==true){
 			subebalas=false;
 		globalvariables.nbalas--;

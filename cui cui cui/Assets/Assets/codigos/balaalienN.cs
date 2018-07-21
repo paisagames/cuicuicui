@@ -21,6 +21,8 @@ public class balaalienN : MonoBehaviour {
 		if(other.tag=="Player"){
 			transform.position=new Vector3(0,1000f,0);
 			avanza.vida-=1f;//shooteralien2.vida--;
+			if(globalvariables.velocidad>1f){
+			globalvariables.velocidad-=0.2f;}
 		//	vidat.text="vida:"+avanza.vida;//vidat.text="vida:"+shooteralien2.vida;
 //			imagenvida.rectTransform.sizeDelta = new Vector2(avanza.vida, 100f);
 			

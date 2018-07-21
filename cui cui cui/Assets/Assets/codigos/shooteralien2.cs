@@ -13,20 +13,29 @@ public class shooteralien2 : MonoBehaviour {
 	public Rigidbody projectil;
 
 	double tiempo;
+	double tiempolevel;
 	void Start () {
 		vida=100;
 		tiempo=0;
-		
+		tiempolevel=350;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+			switch(globalvariables.level){
+				case 1:tiempolevel=350;break;
+				case 2:tiempolevel=300;break;
+				case 3:tiempolevel=250;break;
+				case 4:tiempolevel=200;break;
+			}
+
+
 		if(globalvariables.pausado==false){
 		float distancia=Vector3.Distance(objetivo.position,transform.position);
 			//textprintdistance.text="distancia:"+distancia;
 		transform.LookAt(objetivo);
 		tiempo=tiempo+Time.time;
-		if(tiempo>350){
+		if(tiempo>tiempolevel){
 			if(distancia<120){
 
 		Rigidbody instantiatedProjectile = Instantiate (projectil, puntodelanzamiento.position, projectil.rotation) as Rigidbody;
