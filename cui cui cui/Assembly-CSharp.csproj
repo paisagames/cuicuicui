@@ -48,7 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\Assets 1\Prefabs\ventana.cs" />
      <Compile Include="Assets\Assets 1\Scripts\RandomRotator.cs" />
+     <Compile Include="Assets\Assets\UI\alrevez.cs" />
      <Compile Include="Assets\Assets\UI\touch.cs" />
+     <Compile Include="Assets\Assets\UI\touch1.cs" />
      <Compile Include="Assets\Assets\codigos\UI19.cs" />
      <Compile Include="Assets\Assets\codigos\altura.cs" />
      <Compile Include="Assets\Assets\codigos\avanza.cs" />
@@ -92,9 +94,12 @@
      <Compile Include="Assets\Assets\codigos\textohistoria.cs" />
      <Compile Include="Assets\Assets\codigos\tienda.cs" />
      <Compile Include="Assets\Assets\codigos\ui.cs" />
+     <Compile Include="Assets\Assets\codigos\uigameover.cs" />
      <Compile Include="Assets\Assets\codigos\uivideo.cs" />
      <Compile Include="Assets\Assets\codigos\velocidadbarranueva.cs" />
      <Compile Include="Assets\iconos\canvas.cs" />
+     <Compile Include="Assets\inicialtext.cs" />
+     <None Include="Assets\Privacy_Policy.txt" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/Norman/Documents/GitHub/cuicuicui/cui cui cui/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>

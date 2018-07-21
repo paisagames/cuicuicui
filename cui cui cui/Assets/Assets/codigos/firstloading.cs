@@ -7,18 +7,21 @@ using UnityEngine.SceneManagement;
 public class firstloading : MonoBehaviour {
 
 	// Use this for initialization
-	bool verintro;
+	string verintro;
 	double tiempo;
 	void Start () {
-		verintro=true;
+		verintro="true";
 		tiempo=0;
 		if(PlayerPrefs.HasKey("Iniciaintro")){
-			if(PlayerPrefs.GetString("Iniciaintro")=="FALSE"){
-				verintro=false;
-			}else{verintro=true;}
+			string stringf=PlayerPrefs.GetString("Iniciaintro");
+			switch(stringf){
+				case "FALSE":verintro="false";break;
+				case "TRUE":verintro="true";break;
+				case "FALSEPOLI":verintro="truePOLI";break;
+			}
 		}else{
-			PlayerPrefs.SetString("Iniciaintro","FALSE");
-		verintro=true;
+			PlayerPrefs.SetString("Iniciaintro","FALSEPOLI");
+		verintro="truePOLI";
 		}
 
 		
@@ -29,19 +32,22 @@ public class firstloading : MonoBehaviour {
 	void Update () {
 		tiempo=tiempo+Time.time;
 		if(tiempo>300){
-			if(verintro==true){SceneManager.LoadScene("historia");}else{
-				SceneManager.LoadScene("menu");
-
+			switch(verintro){
+				case "true":SceneManager.LoadScene("historia");break;
+				case "truePOLI":PlayerPrefs.SetString("Iniciaintro","FALSE");SceneManager.LoadScene("politica");break;
+				case "false":SceneManager.LoadScene("menu");break;
 			}
+			
 
 
 		}
 	
 	if(Input.GetKeyDown(KeyCode.F)){
-			PlayerPrefs.SetString("Iniciaintro","TRUE");
+			PlayerPrefs.SetString("Iniciaintro","FALSEPOLI");
 	}
 	
 	
 	}
+	
 
 }

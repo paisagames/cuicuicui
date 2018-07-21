@@ -13,6 +13,7 @@ public class gameover : MonoBehaviour {
 	public Text menut;
 	public Image menui;*/
 	// Use this for initialization
+	
 	void Start () {
 		
 	}
