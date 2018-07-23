@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class avanza : MonoBehaviour {
-
+	
 	int privado;
 	bool avionherido;
 	public MeshRenderer avionmeshrender;
@@ -29,6 +29,8 @@ public class avanza : MonoBehaviour {
 		float posicionZ;
 	// Use this for initialization
 	void Start () {
+		
+
 	if(PlayerPrefs.HasKey("vida")){
 			avanza.vida+=PlayerPrefs.GetFloat("vida");
 		}

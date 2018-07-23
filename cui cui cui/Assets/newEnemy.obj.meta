@@ -9,19 +9,34 @@ ModelImporter:
     100002: pPipe1
     100004: pSphere1
     100006: pSphere2
+    100008: newEnemy:pPipe1
+    100010: newEnemy:pSphere1
+    100012: newEnemy:pSphere2
     400000: //RootNode
     400002: pPipe1
     400004: pSphere1
     400006: pSphere2
+    400008: newEnemy:pPipe1
+    400010: newEnemy:pSphere1
+    400012: newEnemy:pSphere2
     2300000: pPipe1
     2300002: pSphere1
     2300004: pSphere2
+    2300006: newEnemy:pPipe1
+    2300008: newEnemy:pSphere1
+    2300010: newEnemy:pSphere2
     3300000: pPipe1
     3300002: pSphere1
     3300004: pSphere2
+    3300006: newEnemy:pPipe1
+    3300008: newEnemy:pSphere1
+    3300010: newEnemy:pSphere2
     4300000: pPipe1
     4300002: pSphere1
     4300004: pSphere2
+    4300006: newEnemy:pPipe1
+    4300008: newEnemy:pSphere1
+    4300010: newEnemy:pSphere2
   materials:
     importMaterials: 1
     materialName: 0

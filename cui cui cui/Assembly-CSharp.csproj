@@ -49,6 +49,7 @@
      <Compile Include="Assets\Assets 1\Prefabs\ventana.cs" />
      <Compile Include="Assets\Assets 1\Scripts\RandomRotator.cs" />
      <Compile Include="Assets\Assets\UI\alrevez.cs" />
+     <Compile Include="Assets\Assets\UI\firsttimeplaying.cs" />
      <Compile Include="Assets\Assets\UI\touch.cs" />
      <Compile Include="Assets\Assets\UI\touch1.cs" />
      <Compile Include="Assets\Assets\codigos\UI19.cs" />
@@ -84,6 +85,7 @@
      <Compile Include="Assets\Assets\codigos\nuevoUI.cs" />
      <Compile Include="Assets\Assets\codigos\render.cs" />
      <Compile Include="Assets\Assets\codigos\rotaY.cs" />
+     <Compile Include="Assets\Assets\codigos\rotafire.cs" />
      <Compile Include="Assets\Assets\codigos\rotar.cs" />
      <Compile Include="Assets\Assets\codigos\rotar_x.cs" />
      <Compile Include="Assets\Assets\codigos\rotaz.cs" />

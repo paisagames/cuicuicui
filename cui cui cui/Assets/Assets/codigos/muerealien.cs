@@ -10,11 +10,11 @@ public class muerealien : MonoBehaviour {
 //	public  Rigidbody projectil;
 	
 	//public Transform puntodelanzamiento;
-	public MeshRenderer alienrender;
-	public MeshRenderer alienrender2;
-	public MeshRenderer alienrender3;
-	public MeshRenderer alienrenderbala;
-	public SpriteRenderer cuborender;
+	//public MeshRenderer alienrender;
+	//public MeshRenderer alienrender2;
+	//public MeshRenderer alienrender3;
+//	public MeshRenderer alienrenderbala;
+	//public SpriteRenderer cuborender;
 	
 	float vidaalien;
 	float extravidaalien;
@@ -37,7 +37,7 @@ public class muerealien : MonoBehaviour {
 
 	public void restart(){
 		globalvariables.shooteralien=false;
-			alienrender.enabled=false;
+			//alienrender.enabled=false;
 			vidaalien=0;
 			//cubovidarender.enabled=false;
 			globalvariables.shooteralien=true;
@@ -82,11 +82,11 @@ public class muerealien : MonoBehaviour {
 
 		if(globalvariables.shooteralien==true){
 
-			alienrender.enabled=true;
-			alienrender2.enabled=true;
-			alienrender3.enabled=true;
-			alienrenderbala.enabled=true;
-			cuborender.enabled=true;
+			//alienrender.enabled=true;
+			//alienrender2.enabled=true;
+			//alienrender3.enabled=true;
+			//alienrenderbala.enabled=true;
+			//cuborender.enabled=true;
 			
 		}
 	}

@@ -11,6 +11,6 @@ public class rotar_x : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Rotate(0.5f,0,0);
+		transform.Rotate(1f,0,0);
 	}
 }
