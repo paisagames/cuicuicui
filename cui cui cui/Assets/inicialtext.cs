@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.IO;
+
 using UnityEngine.SceneManagement;
 
 public class inicialtext : MonoBehaviour {
 	public Text texto;
+	public TextAsset TEXTOO;
+	
 	// Use this for initialization
-	StreamReader streampolitica=new StreamReader("Assets/Privacy_Policy.txt");
+	
 	void Start () {
-		string line=streampolitica.ReadToEnd();
-		texto.text=""+line;
-		streampolitica.Close();
+		string line2=TEXTOO.ToString();
+		
+		
+		texto.text=""+line2;
+		
 		
 	}
 	

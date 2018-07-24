@@ -10,7 +10,7 @@ public Image shoot;
 	// Use this for initialization
 	void Start () {
 
-		if(PlayerPrefs.HasKey("firstime3")){
+		if(PlayerPrefs.HasKey("firstime7")){
 			velocity.enabled=false;
 			move.enabled=false;
 			shoot.enabled=false;
@@ -21,7 +21,7 @@ public Image shoot;
 			move.enabled=true;
 			shoot.enabled=true;
 
-			PlayerPrefs.SetString("firstime3","firstime2");
+			PlayerPrefs.SetString("firstime7","firstime2");
 
 
 		}

@@ -13,7 +13,7 @@ public Text thistext;
 	
 	// Update is called once per frame
 	void Update () {
-		thistext.rectTransform.position=new Vector3(thistext.rectTransform.position.x,textbase.rectTransform.position.y*(-5.7f),textbase.rectTransform.position.z);
-		
+		thistext.rectTransform.position=new Vector3(thistext.rectTransform.position.x,textbase.rectTransform.position.y*(-14.0f),textbase.rectTransform.position.z);
+			//estaba en -5.7	
 	}
 }

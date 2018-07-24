@@ -31,6 +31,7 @@ public Image imageshoot;
 			tiempofirerender=tiempofirerender+Time.time;
 			if(tiempofirerender<1000){firerender.enabled=true;
 			}else{firerender.enabled=false;}
+			nivel2.revisalevel=false;
 		
 		
 	}
@@ -64,6 +65,7 @@ public Image imageshoot;
 		if(imageshoot.enabled==true){
 			imageshoot.enabled=false;
 		}
+		nivel2.revisalevel=true;
 		
 
 	}			
