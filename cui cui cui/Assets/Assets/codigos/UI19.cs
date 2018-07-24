@@ -16,25 +16,28 @@ public class UI19 : MonoBehaviour {
 	public Image v8;
 	public Image v9;
 	public Image v10;
-
+	float vidatotal;
+	float decimaparte;
 
 	// Use this for initialization
 	void Start () {
+		vidatotal=avanza.vida;
+		decimaparte=vidatotal/10f;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(avanza.vida>=100f){v10.enabled=true;}else{v10.enabled=false;}
-		if(avanza.vida>=90f){v9.enabled=true;}else{v9.enabled=false;}
-		if(avanza.vida>=80f){v8.enabled=true;}else{v8.enabled=false;}
-		if(avanza.vida>=70f){v7.enabled=true;}else{v7.enabled=false;}
-		if(avanza.vida>=60f){v6.enabled=true;}else{v6.enabled=false;}
-		if(avanza.vida>=50f){v5.enabled=true;}else{v5.enabled=false;}
-		if(avanza.vida>=40f){v4.enabled=true;}else{v4.enabled=false;}
-		if(avanza.vida>=30f){v3.enabled=true;}else{v3.enabled=false;}
-		if(avanza.vida>=20f){v2.enabled=true;}else{v2.enabled=false;}
-		if(avanza.vida>=10f){v1.enabled=true;}else{v1.enabled=false;}
+		if(avanza.vida>=decimaparte*9.5f){v10.enabled=true;}else{v10.enabled=false;}//95f
+		if(avanza.vida>=decimaparte*9f){v9.enabled=true;}else{v9.enabled=false;}//90f
+		if(avanza.vida>=decimaparte*8f){v8.enabled=true;}else{v8.enabled=false;}
+		if(avanza.vida>=decimaparte*7f){v7.enabled=true;}else{v7.enabled=false;}
+		if(avanza.vida>=decimaparte*6f){v6.enabled=true;}else{v6.enabled=false;}
+		if(avanza.vida>=decimaparte*5f){v5.enabled=true;}else{v5.enabled=false;}
+		if(avanza.vida>=decimaparte*4f){v4.enabled=true;}else{v4.enabled=false;}
+		if(avanza.vida>=decimaparte*3f){v3.enabled=true;}else{v3.enabled=false;}
+		if(avanza.vida>=decimaparte*2f){v2.enabled=true;}else{v2.enabled=false;}
+		if(avanza.vida>=decimaparte*1f){v1.enabled=true;}else{v1.enabled=false;}
 		if(globalvariables.velocidad<2.5f){
 		velocidadbola.rectTransform.sizeDelta=new Vector2(globalvariables.velocidad*300f,globalvariables.velocidad*300f);
 		}
