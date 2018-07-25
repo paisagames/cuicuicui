@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class globalvariables : object {
 public static int prueba;
+public static bool lapizcomprado;
+public static bool lapizboolactivado;
 public static bool shootalienactivo;	
 public static int newstars;
 	public static int level;

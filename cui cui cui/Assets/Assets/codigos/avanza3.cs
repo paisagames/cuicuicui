@@ -35,6 +35,18 @@ public Image imageshoot;
 		
 		
 	}
+	void guardaestrellas(){
+
+		if(PlayerPrefs.HasKey("totalstars")){
+			int totalstarsint=PlayerPrefs.GetInt("totalstars");
+			totalstarsint+=globalvariables.puntos;
+			PlayerPrefs.SetInt("totalstars",totalstarsint);
+
+		}else{
+			int totalstarsint=globalvariables.puntos;
+			PlayerPrefs.SetInt("totalstars",totalstarsint);
+		}
+	}
 	void OnTriggerEnter(Collider other){
 				if(other.tag=="star"){ 
 					
@@ -68,7 +80,10 @@ public Image imageshoot;
 		nivel2.revisalevel=true;
 		
 
-	}			
+	}		
+
+
+	guardaestrellas();	
 	}
 	
 }
