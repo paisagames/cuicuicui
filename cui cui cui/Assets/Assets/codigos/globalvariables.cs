@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class globalvariables : object {
 public static int prueba;
-public static bool lapizcomprado;
-public static bool lapizboolactivado;
+
+
+public static bool arma2activa;
+public static bool arma3activa;
+public static bool escudocomprado;
+public static bool escudoboolactivado;
 public static bool shootalienactivo;	
 public static int newstars;
 	public static int level;
 	public static bool puededisparar;
-	public static float nbalas;
+	public static int nbalas;
 	public static float velocidad;
 	public static bool gameOn;
 	public static float velocidadguardada;

@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class balaalienN : MonoBehaviour {
 //	public Text vidat;
-	public Image imagenvida;
+
+public MeshRenderer r1;
+public MeshRenderer r2;
+public MeshRenderer r3;
+	//public Image imagenvida;
 	float vida;
 	// Use this for initialization
 	void Start () {
@@ -25,18 +29,25 @@ public class balaalienN : MonoBehaviour {
 			globalvariables.velocidad-=0.2f;}
 		//	vidat.text="vida:"+avanza.vida;//vidat.text="vida:"+shooteralien2.vida;
 //			imagenvida.rectTransform.sizeDelta = new Vector2(avanza.vida, 100f);
-			
-			MeshRenderer meshrender=transform.GetComponent<MeshRenderer>();
-			meshrender.enabled=false;
+			r1.enabled=false;
+			r2.enabled=false;
+			r3.enabled=false;
+			//MeshRenderer meshrender=transform.GetComponent<MeshRenderer>();
+			//meshrender.enabled=false;
 		}
 		if(other.tag=="bola"){
 			transform.position=new Vector3(0,1000f,0);
 			
-			MeshRenderer meshrender=transform.GetComponent<MeshRenderer>();
-			meshrender.enabled=false;
+
+			r1.enabled=false;
+			r2.enabled=false;
+			r3.enabled=false;
+			//MeshRenderer meshrender=transform.GetComponent<MeshRenderer>();
+			//meshrender.enabled=false;
+
 			
-			Renderer render=transform.GetComponent<Renderer>();
-			render.enabled=false;
+			//Renderer render=transform.GetComponent<Renderer>();
+		//	render.enabled=false;
 		}
 	}
 }

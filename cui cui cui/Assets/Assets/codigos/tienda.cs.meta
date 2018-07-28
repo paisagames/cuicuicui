@@ -1,10 +1,28 @@
 fileFormatVersion: 2
 guid: cc2d450a52c9d164e97ad58662eb19f3
-timeCreated: 1532160854
+timeCreated: 1532713509
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - nave_sola: {fileID: 21300000, guid: efd3fc899bd058840935a49e9dbeaa5a, type: 3}
+  - nave_lapiz: {fileID: 21300000, guid: d93a7819d752eab49b9d3ecde7d98a5e, type: 3}
+  - balista_1: {instanceID: 0}
+  - salud_1: {instanceID: 0}
+  - boton_siguient: {instanceID: 0}
+  - boton_anterior: {instanceID: 0}
+  - startext: {instanceID: 0}
+  - imagenmuestra: {instanceID: 0}
+  - life: {instanceID: 0}
+  - bulletpower: {instanceID: 0}
+  - totalstars: {instanceID: 0}
+  - rank: {instanceID: 0}
+  - pencilpowertext: {instanceID: 0}
+  - rancktext: {instanceID: 0}
+  - botonlapiz: {instanceID: 0}
+  - imagelapiz: {instanceID: 0}
+  - textlapiz: {instanceID: 0}
+  - precioACTUALtext: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

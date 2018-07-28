@@ -53,6 +53,7 @@
      <Compile Include="Assets\Assets\UI\touch.cs" />
      <Compile Include="Assets\Assets\UI\touch1.cs" />
      <Compile Include="Assets\Assets\codigos\UI19.cs" />
+     <Compile Include="Assets\Assets\codigos\activaarma2y3.cs" />
      <Compile Include="Assets\Assets\codigos\altura.cs" />
      <Compile Include="Assets\Assets\codigos\avanza.cs" />
      <Compile Include="Assets\Assets\codigos\avanza2.cs" />
@@ -76,6 +77,7 @@
      <Compile Include="Assets\Assets\codigos\kepedo.cs" />
      <Compile Include="Assets\Assets\codigos\lookat.cs" />
      <Compile Include="Assets\Assets\codigos\meshrender.cs" />
+     <Compile Include="Assets\Assets\codigos\meshrenderbalaalien.cs" />
      <Compile Include="Assets\Assets\codigos\movealien.cs" />
      <Compile Include="Assets\Assets\codigos\muerealien.cs" />
      <Compile Include="Assets\Assets\codigos\muerebola.cs" />
@@ -84,6 +86,7 @@
      <Compile Include="Assets\Assets\codigos\nivel2.cs" />
      <Compile Include="Assets\Assets\codigos\nuevoUI.cs" />
      <Compile Include="Assets\Assets\codigos\render.cs" />
+     <Compile Include="Assets\Assets\codigos\renderbalaalienN.cs" />
      <Compile Include="Assets\Assets\codigos\rotaY.cs" />
      <Compile Include="Assets\Assets\codigos\rotafire.cs" />
      <Compile Include="Assets\Assets\codigos\rotar.cs" />

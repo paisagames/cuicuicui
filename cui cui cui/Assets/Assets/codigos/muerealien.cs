@@ -6,6 +6,8 @@ public class muerealien : MonoBehaviour {
 	public AudioSource sonidomuere;
 	public Transform nave;
 	public static bool restartbool;
+
+	float fuerzabala;
 	//double tiempodispara;
 //	public  Rigidbody projectil;
 	
@@ -31,6 +33,17 @@ public class muerealien : MonoBehaviour {
 		//tiempodedisparo2=0;
 		restartbool=false;
 		extravidaalien=5f;
+
+		fuerzabala=1f;
+
+		if(PlayerPrefs.HasKey("fuerzabala")){
+			fuerzabala=PlayerPrefs.GetFloat("fuerzabala");
+		}else{
+			fuerzabala=1f;
+			PlayerPrefs.SetFloat("fuerzabala",1f);
+		}
+
+
 	}
 	
 	// Update is called once per frame
@@ -94,12 +107,10 @@ public class muerealien : MonoBehaviour {
 		if(other.tag=="bala"){
 
 		float armo=0f;
-		if(PlayerPrefs.HasKey("armo")){
-		armo=PlayerPrefs.GetFloat("armo");
-		}
+	
 		//transform.position=new Vector3(Random.Range(-2f,20f),Random.Range(0f,10f),other.transform.position.z-20f);
-			vidaalien--;
-			vidaalien-=armo;
+		
+			vidaalien-=fuerzabala;
 			
 			cubovida.transform.localScale=new Vector3((vidaalien*0.1f)/13,0.2f,0.001f);
 

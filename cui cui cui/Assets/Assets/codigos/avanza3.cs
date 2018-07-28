@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class avanza3 : MonoBehaviour {
 
 public Image imageshoot;
+int limitedebalas;
 
 
 //hay un pedo para quitar el circulo de vida y velocidad la primera vez que se juega
@@ -20,6 +21,21 @@ public Image imageshoot;
 	void Start () {
 		tiempofirerender=1500;
 		privado=0;
+
+
+
+
+
+
+
+
+		if(PlayerPrefs.HasKey("maxbalas")){
+			limitedebalas=PlayerPrefs.GetInt("maxbalas");
+
+		}else{
+			limitedebalas=30;
+			PlayerPrefs.SetInt("maxbalas",30);
+		}
 	}
 	
 	// Update is called once per frame
@@ -47,6 +63,17 @@ public Image imageshoot;
 			PlayerPrefs.SetInt("totalstars",totalstarsint);
 		}
 	}
+
+
+	void cargabalasN(){
+			globalvariables.nbalas+=5;
+			
+			
+			
+			globalvariables.puededisparar=true;
+			if(globalvariables.nbalas>limitedebalas){globalvariables.nbalas=limitedebalas;}
+
+	}
 	void OnTriggerEnter(Collider other){
 				if(other.tag=="star"){ 
 					
@@ -62,8 +89,8 @@ public Image imageshoot;
 			
 			
 //			vel.text=""+(globalvariables.velocidad*1000)+"km/h" +"--"+ vida +"%";
-			mueveydispara mueveydispara=new mueveydispara();
-			mueveydispara.cargabalas();
+			cargabalasN();
+			//mueveydispara.cargabalas();
 			if(globalvariables.sonidoactivadobool==true){
 			sonidostrella.Play();}
 

@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 public class tienda : MonoBehaviour {
 
-public Sprite nave_sola;
-public Sprite nave_lapiz;
-public Sprite balista_1;
+public Sprite corazon_s;
+public Sprite bala_s;
+public Sprite escudo_s;
 
-public Sprite salud_1;
-
+public Sprite arma_s;
+public Sprite meteoro_s;
+public Sprite bagbulltes_s;
 
 
 public Button boton_siguient;
@@ -25,30 +26,44 @@ public Text totalstars;
 public Text rank;
 
 
-public Text pencilpowertext;
+public Text shieldtext;
 public Text rancktext;
 
+
+public Text armastotales;
+
+public Text starscollectvalue;
 //precios
 int preciovida;
-int preciolapiz;
-int precioArmas;
+int precioescudo;
+int precioBullets;
 
 
 int imagenactual;
 
 //fuerzas
 float fuerzabala;
-float fuerzalapiz;
+float resistenciaEscudo;
 float vida;
 int totalstarsint;
 
-public Button botonlapiz;
-public Image imagelapiz;
-public Text textlapiz;
+int limitedebalas;
+
+
+
 
 public Text precioACTUALtext;
 
+public Text limitedebalastext;
+
+int precioArmas;
 int estrellas;
+
+int valormeteoro;
+
+int precioMeteorodoble;
+
+int precioBAGBULLETS;
 
 
 
@@ -57,10 +72,11 @@ int estrellas;
 
 
 		imagenactual=1;
-		imagenmuestra.sprite=balista_1;
-		precioACTUALtext.text="ZERO";
+		imagenmuestra.sprite=corazon_s;
 		
-		
+		valormeteoro=1;
+		precioMeteorodoble=500;
+		limitedebalas=30;
 		
 
 			//stars
@@ -73,42 +89,68 @@ int estrellas;
 			estrellas=PlayerPrefs.GetInt("stars");
 			startext.text="$"+estrellas;
 		}
-
-		if(PlayerPrefs.HasKey("precioVida")){
-			preciovida=PlayerPrefs.GetInt("precioVida");
-		}else{
-			preciovida=120;
-			PlayerPrefs.SetInt("precioVida",120);
-		}
-
-		if(PlayerPrefs.HasKey("precioLapiz")){
-			preciolapiz=PlayerPrefs.GetInt("precioLapiz");
-			
-		}else{
-			preciolapiz=300;
-			PlayerPrefs.SetInt("precioLapiz",300);
-			PlayerPrefs.SetString("lapizcomprado","false");
-		}
-
 		if(PlayerPrefs.HasKey("precioArmas")){
 			precioArmas=PlayerPrefs.GetInt("precioArmas");
 		}else{
-			precioArmas=150;
-			PlayerPrefs.SetInt("precioArmas",150);
+			precioArmas=420;
+			PlayerPrefs.SetInt("precioArmas",420);
+		}
+
+
+		if(PlayerPrefs.HasKey("preciometeorodoble")){
+			precioMeteorodoble=PlayerPrefs.GetInt("preciometeorodoble");
+		}else{
+			precioMeteorodoble=2500;
+			PlayerPrefs.SetInt("preciometeorodoble",2500);
+		}
+
+		if(PlayerPrefs.HasKey("valormeteoro")){
+			valormeteoro=PlayerPrefs.GetInt("valormeteoro");
+		}else{
+			valormeteoro=1;
+			PlayerPrefs.SetInt("valormeteoro",1);
+		}
+
+
+
+
+		if(PlayerPrefs.HasKey("precioVida")){
+			preciovida=PlayerPrefs.GetInt("precioVida");
+			precioACTUALtext.text=""+preciovida;
+		}else{
+			preciovida=120;
+			PlayerPrefs.SetInt("precioVida",120);
+			precioACTUALtext.text=""+preciovida;
+		}
+
+		if(PlayerPrefs.HasKey("precioEscudo")){
+			precioescudo=PlayerPrefs.GetInt("precioEscudo");
+			
+		}else{
+			precioescudo=300;
+			PlayerPrefs.SetInt("precioescudo",300);
+			PlayerPrefs.SetString("escudocomprado","false");
+		}
+
+		if(PlayerPrefs.HasKey("precioBullets")){
+			precioBullets=PlayerPrefs.GetInt("precioBullets");
+		}else{
+			precioBullets=150;
+			PlayerPrefs.SetInt("precioBullets",150);
 		}
 
 		if(PlayerPrefs.HasKey("fuerzabala")){
 			fuerzabala=PlayerPrefs.GetFloat("fuerzabala");
 		}else{
-			fuerzabala=0f;
-			PlayerPrefs.SetFloat("fuerzabala",0f);
+			fuerzabala=1f;
+			PlayerPrefs.SetFloat("fuerzabala",1f);
 		}
 
-		if(PlayerPrefs.HasKey("fuerzalapiz")){
-			fuerzalapiz=PlayerPrefs.GetFloat("fuerzalapiz");
+		if(PlayerPrefs.HasKey("resistenciaEscudo")){
+			resistenciaEscudo=PlayerPrefs.GetFloat("resistenciaEscudo");
 		}else{
-			fuerzalapiz=0f;
-			PlayerPrefs.SetFloat("fuerzalapiz",0f);
+			resistenciaEscudo=0f;
+			PlayerPrefs.SetFloat("resistenciaEscudo",0f);
 		}
 
 		if(PlayerPrefs.HasKey("vida")){
@@ -125,30 +167,50 @@ int estrellas;
 			PlayerPrefs.SetInt("totalstars",0);
 		}
 
-		if(PlayerPrefs.HasKey("lapizBool")){
-			///aqui poner si el lapiz esta activo
-			string lapizBoolstring=PlayerPrefs.GetString("lapizBool");
-			if(lapizBoolstring=="true"){
-				globalvariables.lapizboolactivado=true;
-				imagenmuestra.sprite=nave_lapiz;
+		if(PlayerPrefs.HasKey("escudobool")){
+			///aqui poner si el ESCUDO esta activo
+			string escudoboolstring=PlayerPrefs.GetString("escudobool");
+			if(escudoboolstring=="true"){
+				globalvariables.escudoboolactivado=true;
+				
 
-			}else{globalvariables.lapizboolactivado=false;
-			imagenmuestra.sprite=nave_sola;}
+			}else{globalvariables.escudoboolactivado=false;
+			}
 		}else{
-			PlayerPrefs.SetString("lapizBool","false");
-			globalvariables.lapizboolactivado=false;
+			PlayerPrefs.SetString("escudobool","false");
+			globalvariables.escudoboolactivado=false;
 		}
-		if(PlayerPrefs.HasKey("lapizcomprado")){
-			string stringlapizcomprado=PlayerPrefs.GetString("lapizcomprado");
-			if(stringlapizcomprado=="true"){
-				globalvariables.lapizcomprado=true;
+		if(PlayerPrefs.HasKey("escudocomprado")){
+			string stringescudocomprado=PlayerPrefs.GetString("escudocomprado");
+			if(stringescudocomprado=="true"){
+				globalvariables.escudocomprado=true;
 			}else{
-				globalvariables.lapizcomprado=false;
+				globalvariables.escudocomprado=false;
 			}
 
 
-		}else{globalvariables.lapizcomprado=false;}
+		}else{globalvariables.escudocomprado=false;}
 		
+
+
+		if(PlayerPrefs.HasKey("maxbalas")){
+			limitedebalas=PlayerPrefs.GetInt("maxbalas");
+
+		}else{
+			limitedebalas=30;
+			PlayerPrefs.SetInt("maxbalas",30);
+		}
+
+		if(PlayerPrefs.HasKey("preciobagbullets")){
+			precioBAGBULLETS=PlayerPrefs.GetInt("preciobagbullets");
+		}else{
+				precioBAGBULLETS=250;
+				PlayerPrefs.SetInt("preciobagbullets",250);
+
+		}
+
+
+
 	imprimetodo();
 		
 	}
@@ -157,18 +219,42 @@ int estrellas;
 	void Update () {
 
 			if(Input.GetKeyDown(KeyCode.R)){
-			PlayerPrefs.SetInt("precioVida",100);
-			PlayerPrefs.SetInt("precioLapiz",100);
-			PlayerPrefs.SetInt("precioArmas",100);
-			PlayerPrefs.SetInt("stars",110);
-			PlayerPrefs.SetFloat("fuerzabala",0);
-			PlayerPrefs.SetFloat("fuerzalapiz",10);
-			PlayerPrefs.SetFloat("vida",0);
-			PlayerPrefs.SetInt("totalstars",0);
+			estrellas=0;
+			PlayerPrefs.SetInt("stars",0);
+			
+			PlayerPrefs.SetInt("precioArmas",420);
+			precioArmas=420;
+			PlayerPrefs.SetInt("preciometeorodoble",2500);
+			precioMeteorodoble=2500;
+			PlayerPrefs.SetInt("precioVida",120);
+			preciovida=120;
+			PlayerPrefs.SetInt("precioescudo",300);
+			precioescudo=300;
+			PlayerPrefs.SetString("escudocomprado","false");
+		
+			PlayerPrefs.SetInt("precioBullets",150);
+			precioBullets=150;
+			PlayerPrefs.SetFloat("fuerzabala",1f);
+			fuerzabala=1;
+			PlayerPrefs.SetFloat("resistenciaEscudo",0f);
+			resistenciaEscudo=0;
+			PlayerPrefs.SetFloat("vida",0f);
+			vida=0;
+			PlayerPrefs.SetString("escudobool","false");
+
+			PlayerPrefs.SetInt("cantidaddearmas",1);
+			PlayerPrefs.SetInt("maxbalas",30);
+			PlayerPrefs.SetInt("valormeteoro",1);
+			imprimetodo();
 
 
 			
 
+			}
+			if(Input.GetKeyDown(KeyCode.T)){
+				estrellas+=200;
+				PlayerPrefs.SetInt("stars",estrellas);
+				imprimetodo();
 			}
 
 
@@ -176,23 +262,60 @@ int estrellas;
 
 //IMPRIME METODO
 void imprimetodo(){
-	life.text="Life "+vida+avanza.vida;
+	life.text="Life "+(vida+avanza.vida);
 	bulletpower.text="Bullet power "+fuerzabala;
+
+	int stars2=PlayerPrefs.GetInt("stars");
+	startext.text=""+stars2;
+
 	totalstars.text="Total stats "+totalstarsint;
-	pencilpowertext.text="Pencil power "+fuerzalapiz;
+	shieldtext.text="Shield "+resistenciaEscudo;
+
+	limitedebalastext.text="Bullets Capacity "+limitedebalas;
+
+
+	int cantidaddearmas=1;
+			if(PlayerPrefs.HasKey("cantidaddearmas")){
+				cantidaddearmas=PlayerPrefs.GetInt("cantidaddearmas");
+				
+			}else{
+				PlayerPrefs.SetInt("cantidaddearmas",1);
+				cantidaddearmas=1;
+			}
+	armastotales.text="Weapons "+ cantidaddearmas;
+
+	valormeteoro=PlayerPrefs.GetInt("valormeteoro");
+	starscollectvalue.text="Stars value "+valormeteoro;
 	rancktext.text="Rank A";
 	PlayerPrefs.SetInt("precioVida",preciovida);
-	PlayerPrefs.SetInt("precioLapiz",preciolapiz);
-	PlayerPrefs.SetInt("precioArmas",precioArmas);
+	PlayerPrefs.SetInt("precioescudo",precioescudo);
+	PlayerPrefs.SetInt("precioBullets",precioBullets);
 
-	string lapizBoolstring=PlayerPrefs.GetString("lapizBool");
-	if(lapizBoolstring=="true"){
-		imagenmuestra.sprite=nave_lapiz;
-	}else{imagenmuestra.sprite=nave_sola;}
+	string escudoboolstring=PlayerPrefs.GetString("escudobool");
+	cambiaimagen();
 	
 
 
 	
+}
+
+public void compraBAGBULLETS(){
+	if(estrellas>=precioBAGBULLETS)
+	{
+		estrellas-=precioBAGBULLETS;
+		PlayerPrefs.SetInt("stars",estrellas);
+		limitedebalas+=10;
+		PlayerPrefs.SetInt("maxbalas",limitedebalas);
+		double aumento=precioBAGBULLETS*1.30;
+			precioBAGBULLETS=(int)aumento;
+
+
+			PlayerPrefs.SetInt("preciobagbullets",precioBAGBULLETS);
+
+		imprimetodo();
+
+
+	}
 }
 
 
@@ -206,10 +329,17 @@ void imprimetodo(){
 	public void compraVida(){
 		if(estrellas>=preciovida){
 			estrellas-=preciovida;
-			vida=vida*1.20f;
+;
+			PlayerPrefs.SetInt("stars",estrellas);
+
+			vida=vida+50f;
 			PlayerPrefs.SetFloat("vida",vida);
-			double aumento=preciovida*1.20;
+			double aumento=preciovida*1.30;
 			preciovida=(int)aumento;
+
+
+			PlayerPrefs.SetInt("precioVida",preciovida);
+
 			imprimetodo();
 
 		}
@@ -220,12 +350,21 @@ void imprimetodo(){
 
 
 	public void compraBullets(){
-		if(estrellas>=precioArmas){
-			estrellas-=precioArmas;
-			fuerzabala=fuerzabala*1.20f;
+		if(estrellas>=precioBullets){
+			estrellas-=precioBullets;
+
+			
+			PlayerPrefs.SetInt("stars",estrellas);
+
+
+			fuerzabala=fuerzabala+1f;
 			PlayerPrefs.SetFloat("fuerzabala",fuerzabala);
-			double aumento=precioArmas*1.20;
-			precioArmas=(int)aumento;
+			double aumento=precioBullets*1.30;
+			precioBullets=(int)aumento;
+
+			PlayerPrefs.SetInt("precioBullets",precioBullets);
+
+
 			imprimetodo();
 
 		}
@@ -235,47 +374,89 @@ void imprimetodo(){
 	}
 
 
-	public void compraLapiz(){
-if(estrellas>=preciolapiz){
-		if(globalvariables.lapizcomprado==false){
-			globalvariables.lapizcomprado=true;PlayerPrefs.SetString("lapizcomprado","true");
-			botonlapiz.enabled=true;
-		imagelapiz.enabled=true;
-		textlapiz.enabled=true;
+	public void compraEscudo(){
+if(estrellas>=precioescudo){
+		if(globalvariables.escudocomprado==false){
+			globalvariables.escudocomprado=true;PlayerPrefs.SetString("escudocomprado","true");
+			
+		
 		
 		
 		}
 		
-			if(globalvariables.lapizboolactivado==false){
+			if(globalvariables.escudoboolactivado==false){
 
-			estrellas-=precioArmas;
-			globalvariables.lapizboolactivado=true;
-			PlayerPrefs.SetString("lapizBool","true");
-			double aumento=preciolapiz*1.20;
-			preciolapiz=(int)aumento;
-			imprimetodo();
+			estrellas-=precioescudo;
+			PlayerPrefs.SetInt("stars",estrellas);
+
+
+			globalvariables.escudoboolactivado=true;
+			PlayerPrefs.SetString("escudobool","true");
+			double aumento=precioescudo*1.20;
+			precioescudo=(int)aumento;
+
+			PlayerPrefs.SetInt("precioescudo",precioescudo);
+		
 			}
 		}
+		imprimetodo();
 	}
 
-	public void cambiaimagenalapiz(){
-		if(imagenmuestra.sprite==nave_lapiz){imagenmuestra.sprite=nave_sola;}else{
-			imagenmuestra.sprite=nave_lapiz;
+	public void compraArma(){
+		if(estrellas>=precioArmas){
+			int cantidaddearmas=1;
+			if(PlayerPrefs.HasKey("cantidaddearmas")){
+				cantidaddearmas=PlayerPrefs.GetInt("cantidaddearmas");
+				
+			}else{
+				PlayerPrefs.SetInt("cantidaddearmas",1);
+				cantidaddearmas=1;
+			}
+			cantidaddearmas++;
+			PlayerPrefs.SetInt("cantidaddearmas",cantidaddearmas);
+
+			estrellas-=precioArmas;
+			PlayerPrefs.SetInt("stars",estrellas);
+
+
+
+
+			double aumento=precioArmas*1.70;
+			precioArmas=(int)aumento;
+			PlayerPrefs.SetInt("precioArmas",precioArmas);
+		
+	imprimetodo();
 		}
+	}
 
+	public void compraMeteorodoble(){
+		if(estrellas>=precioMeteorodoble){
+			valormeteoro++;
+			PlayerPrefs.SetInt("valormeteoro",valormeteoro);
+
+			estrellas-=precioMeteorodoble;
+			PlayerPrefs.SetInt("stars",estrellas);
+
+			double aumento=precioMeteorodoble*1.40;
+			precioMeteorodoble=(int)aumento;
+			PlayerPrefs.SetInt("preciometeorodoble",precioMeteorodoble);
+		}
+			imprimetodo();
 
 	}
 
+	
 
 
 	
 	void cambiaimagen(){
 		switch(imagenactual){
-			case 1:imagenmuestra.sprite=balista_1;precioACTUALtext.text=""+precioArmas;break;
-			case 2:imagenmuestra.sprite=salud_1;precioACTUALtext.text=""+preciovida;break;
-			case 3:imagenmuestra.sprite=nave_lapiz;precioACTUALtext.text=""+preciolapiz; break;
-			case 4:imagenmuestra.sprite=nave_sola;precioACTUALtext.text="ZERO";break;
-		
+			case 1:imagenmuestra.sprite=corazon_s;precioACTUALtext.text=""+preciovida;break;
+			case 2:imagenmuestra.sprite=bala_s;precioACTUALtext.text=""+precioBullets;break;
+			case 3:imagenmuestra.sprite=escudo_s;precioACTUALtext.text=""+precioescudo; break;
+			case 4:imagenmuestra.sprite=arma_s;precioACTUALtext.text=""+precioArmas;break;
+			case 5:imagenmuestra.sprite=meteoro_s;precioACTUALtext.text=""+precioMeteorodoble;break;
+			case 6:imagenmuestra.sprite=bagbulltes_s;precioACTUALtext.text=""+precioBAGBULLETS;break;
 
 		}
 
@@ -285,13 +466,26 @@ if(estrellas>=preciolapiz){
 
 	}
 
+	public void realizCompras(){
+		switch(imagenactual){
+			case 1:compraVida();break;
+			case 2:compraBullets();break;
+			case 3:compraEscudo();break;
+			case 4: compraArma();break;
+			case 5: compraMeteorodoble();break;
+			case 6:compraBAGBULLETS();break;
+
+		}
+
+	}
+
 	public void siguiente(){
-		if(imagenactual<4){imagenactual++;}else{imagenactual=1;}
+		if(imagenactual<6){imagenactual++;}else{imagenactual=1;}
 		
 		cambiaimagen();
 	}
 	public void anterior(){
-		if(imagenactual>1){imagenactual--;}else{imagenactual=4;}
+		if(imagenactual>1){imagenactual--;}else{imagenactual=6;}
 		cambiaimagen();
 	}
 
