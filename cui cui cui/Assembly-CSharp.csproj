@@ -65,6 +65,7 @@
      <Compile Include="Assets\Assets\codigos\cargando.cs" />
      <Compile Include="Assets\Assets\codigos\copiarotacion.cs" />
      <Compile Include="Assets\Assets\codigos\corrigecorazon.cs" />
+     <Compile Include="Assets\Assets\codigos\corrigeposicion_escudo.cs" />
      <Compile Include="Assets\Assets\codigos\corrigeposition.cs" />
      <Compile Include="Assets\Assets\codigos\corrigeposition1.cs" />
      <Compile Include="Assets\Assets\codigos\detectanave.cs" />
@@ -88,6 +89,7 @@
      <Compile Include="Assets\Assets\codigos\render.cs" />
      <Compile Include="Assets\Assets\codigos\renderbalaalienN.cs" />
      <Compile Include="Assets\Assets\codigos\rotaY.cs" />
+     <Compile Include="Assets\Assets\codigos\rota_y_vel.cs" />
      <Compile Include="Assets\Assets\codigos\rotafire.cs" />
      <Compile Include="Assets\Assets\codigos\rotar.cs" />
      <Compile Include="Assets\Assets\codigos\rotar_x.cs" />

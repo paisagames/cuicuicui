@@ -43,7 +43,7 @@ int imagenactual;
 
 //fuerzas
 float fuerzabala;
-float resistenciaEscudo;
+int resistenciaEscudo;
 float vida;
 int totalstarsint;
 
@@ -71,6 +71,9 @@ int precioBAGBULLETS;
 	void Start () {
 
 
+
+
+		resistenciaEscudo=1000;	
 		imagenactual=1;
 		imagenmuestra.sprite=corazon_s;
 		
@@ -147,10 +150,10 @@ int precioBAGBULLETS;
 		}
 
 		if(PlayerPrefs.HasKey("resistenciaEscudo")){
-			resistenciaEscudo=PlayerPrefs.GetFloat("resistenciaEscudo");
+			resistenciaEscudo=PlayerPrefs.GetInt("resistenciaEscudo");
 		}else{
-			resistenciaEscudo=0f;
-			PlayerPrefs.SetFloat("resistenciaEscudo",0f);
+			resistenciaEscudo=0;
+			PlayerPrefs.SetInt("resistenciaEscudo",0);
 		}
 
 		if(PlayerPrefs.HasKey("vida")){
@@ -219,6 +222,11 @@ int precioBAGBULLETS;
 	void Update () {
 
 			if(Input.GetKeyDown(KeyCode.R)){
+
+
+			PlayerPrefs.SetInt("totalstars",0);
+			totalstarsint=0;
+
 			estrellas=0;
 			PlayerPrefs.SetInt("stars",0);
 			
@@ -236,12 +244,13 @@ int precioBAGBULLETS;
 			precioBullets=150;
 			PlayerPrefs.SetFloat("fuerzabala",1f);
 			fuerzabala=1;
-			PlayerPrefs.SetFloat("resistenciaEscudo",0f);
+			PlayerPrefs.SetInt("resistenciaEscudo",0);
 			resistenciaEscudo=0;
+			globalvariables.escudocomprado=false;
 			PlayerPrefs.SetFloat("vida",0f);
 			vida=0;
 			PlayerPrefs.SetString("escudobool","false");
-
+		
 			PlayerPrefs.SetInt("cantidaddearmas",1);
 			PlayerPrefs.SetInt("maxbalas",30);
 			PlayerPrefs.SetInt("valormeteoro",1);
@@ -269,7 +278,7 @@ void imprimetodo(){
 	startext.text=""+stars2;
 
 	totalstars.text="Total stats "+totalstarsint;
-	shieldtext.text="Shield "+resistenciaEscudo;
+	shieldtext.text="Shield Resistance "+resistenciaEscudo;
 
 	limitedebalastext.text="Bullets Capacity "+limitedebalas;
 
@@ -292,6 +301,9 @@ void imprimetodo(){
 	PlayerPrefs.SetInt("precioBullets",precioBullets);
 
 	string escudoboolstring=PlayerPrefs.GetString("escudobool");
+
+	
+
 	cambiaimagen();
 	
 
@@ -375,7 +387,7 @@ public void compraBAGBULLETS(){
 
 
 	public void compraEscudo(){
-if(estrellas>=precioescudo){
+		if(estrellas>=precioescudo){
 		if(globalvariables.escudocomprado==false){
 			globalvariables.escudocomprado=true;PlayerPrefs.SetString("escudocomprado","true");
 			
@@ -384,11 +396,16 @@ if(estrellas>=precioescudo){
 		
 		}
 		
-			if(globalvariables.escudoboolactivado==false){
-
+			
+					if(resistenciaEscudo<1000){
+						resistenciaEscudo=1000;}
+					double aumenta=resistenciaEscudo*1.2;
+					resistenciaEscudo=(int)aumenta;
 			estrellas-=precioescudo;
 			PlayerPrefs.SetInt("stars",estrellas);
-
+			
+		PlayerPrefs.SetInt("resistenciaEscudo",resistenciaEscudo);
+			
 
 			globalvariables.escudoboolactivado=true;
 			PlayerPrefs.SetString("escudobool","true");
@@ -397,7 +414,7 @@ if(estrellas>=precioescudo){
 
 			PlayerPrefs.SetInt("precioescudo",precioescudo);
 		
-			}
+			
 		}
 		imprimetodo();
 	}
@@ -431,13 +448,13 @@ if(estrellas>=precioescudo){
 
 	public void compraMeteorodoble(){
 		if(estrellas>=precioMeteorodoble){
-			valormeteoro++;
+			valormeteoro*=2;
 			PlayerPrefs.SetInt("valormeteoro",valormeteoro);
 
 			estrellas-=precioMeteorodoble;
 			PlayerPrefs.SetInt("stars",estrellas);
 
-			double aumento=precioMeteorodoble*1.40;
+			double aumento=precioMeteorodoble*3.40;
 			precioMeteorodoble=(int)aumento;
 			PlayerPrefs.SetInt("preciometeorodoble",precioMeteorodoble);
 		}

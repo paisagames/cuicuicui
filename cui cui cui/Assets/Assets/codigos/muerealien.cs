@@ -17,7 +17,7 @@ public class muerealien : MonoBehaviour {
 	//public MeshRenderer alienrender3;
 //	public MeshRenderer alienrenderbala;
 	//public SpriteRenderer cuborender;
-	
+	int valormeteoro;
 	float vidaalien;
 	float extravidaalien;
 	public Transform cubovida;
@@ -26,6 +26,15 @@ public class muerealien : MonoBehaviour {
 	double tiempodedisparo2;
 	// Use this for initialization
 	void Start () {
+
+	if(PlayerPrefs.HasKey("valormeteoro")){
+			valormeteoro=PlayerPrefs.GetInt("valormeteoro");
+		}else{
+			valormeteoro=1;
+			PlayerPrefs.SetInt("valormeteoro",1);
+		}
+
+
 		globalvariables.shootalienactivo=true;
 		globalvariables.shooteralien=false;
 		vidaalien=10f;
@@ -85,7 +94,7 @@ public class muerealien : MonoBehaviour {
 			vidaalien=10f+extravidaalien;
 			extravidaalien+=5f;
 			cubovida.transform.localScale=new Vector3((vidaalien*0.1f)/13,0.2f,0.001f);
-			globalvariables.puntos+=5;
+			globalvariables.puntos+= (valormeteoro*5);
 
 			///mover la nave del alien a mas adelante de la nave normal
 			// que vuelva a su vida original la nave alien

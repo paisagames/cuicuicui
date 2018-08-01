@@ -7,10 +7,19 @@ public class avanza3 : MonoBehaviour {
 
 public Image imageshoot;
 int limitedebalas;
+int valormeteoro;
+double resistenciaEscudo;
+
 
 
 //hay un pedo para quitar el circulo de vida y velocidad la primera vez que se juega
+
+	public SpriteRenderer renderObjetoEscudo;
+	public BoxCollider boxColliderObjetoEscudo;
 		public SpriteRenderer firerender;
+		public BoxCollider escudocolider;
+		public MeshRenderer escudorender;
+		double tiempoduracionescudo;
 
 		double tiempofirerender;
 	public AudioSource sonidostrella;
@@ -19,11 +28,25 @@ int limitedebalas;
 
 	// Use this for initialization
 	void Start () {
+		tiempoduracionescudo=0;
 		tiempofirerender=1500;
 		privado=0;
 
+		if(globalvariables.escudocomprado==true){
+			renderObjetoEscudo.enabled=true;
+			boxColliderObjetoEscudo.enabled=true;
+		}else{
+			renderObjetoEscudo.enabled=false;
+			boxColliderObjetoEscudo.enabled=false;
+		}
 
 
+	if(PlayerPrefs.HasKey("valormeteoro")){
+			valormeteoro=PlayerPrefs.GetInt("valormeteoro");
+		}else{
+			valormeteoro=1;
+			PlayerPrefs.SetInt("valormeteoro",1);
+		}
 
 
 
@@ -35,6 +58,16 @@ int limitedebalas;
 		}else{
 			limitedebalas=30;
 			PlayerPrefs.SetInt("maxbalas",30);
+		}
+
+	if(PlayerPrefs.HasKey("resistenciaEscudo")){
+		 resistenciaEscudo=0;
+		int iresistenciaEscudo;
+			iresistenciaEscudo=PlayerPrefs.GetInt("resistenciaEscudo");
+		resistenciaEscudo=iresistenciaEscudo;
+		}else{
+			resistenciaEscudo=0;
+			PlayerPrefs.SetInt("resistenciaEscudo",0);
 		}
 	}
 	
@@ -49,6 +82,15 @@ int limitedebalas;
 			}else{firerender.enabled=false;}
 			nivel2.revisalevel=false;
 		
+		if(escudorender.enabled==true){
+			tiempoduracionescudo+=Time.time;
+
+			if(tiempoduracionescudo>resistenciaEscudo){
+				escudorender.enabled=false;
+				escudocolider.enabled=false;
+				tiempoduracionescudo=0;
+			}
+		}
 		
 	}
 	void guardaestrellas(){
@@ -78,7 +120,8 @@ int limitedebalas;
 				if(other.tag=="star"){ 
 					
 			other.transform.position=new Vector3(Random.Range(transform.position.x-0.4f,transform.position.x+0.4f),Random.Range(0f,10f),transform.position.z-120f);
-			globalvariables.puntos++;
+			
+			globalvariables.puntos+=valormeteoro;
 			//privado++;
 			//texto.text=""+globalvariables.newstars+"ff";
 			
@@ -111,6 +154,16 @@ int limitedebalas;
 
 
 	guardaestrellas();	
+	
+		if(other.tag=="activaescudo"){
+			escudocolider.enabled=true;
+			escudorender.enabled=true;
+
+
+		}
+
 	}
+
+	
 	
 }
