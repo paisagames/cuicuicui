@@ -86,6 +86,7 @@
      <Compile Include="Assets\Assets\codigos\mueveydispara.cs" />
      <Compile Include="Assets\Assets\codigos\nivel2.cs" />
      <Compile Include="Assets\Assets\codigos\nuevoUI.cs" />
+     <Compile Include="Assets\Assets\codigos\particulas.cs" />
      <Compile Include="Assets\Assets\codigos\render.cs" />
      <Compile Include="Assets\Assets\codigos\renderbalaalienN.cs" />
      <Compile Include="Assets\Assets\codigos\rotaY.cs" />

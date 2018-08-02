@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 783, y: 492}
-  m_MaxSize: {x: 16008, y: 14042}
+  m_MinSize: {x: 787, y: 492}
+  m_MaxSize: {x: 16012, y: 14042}
   vertical: 1
-  controlID: 10
+  controlID: 97
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -132,10 +132,10 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 364
-  m_MinSize: {x: 783, y: 221}
-  m_MaxSize: {x: 16008, y: 4021}
+  m_MinSize: {x: 787, y: 221}
+  m_MaxSize: {x: 16012, y: 4021}
   vertical: 0
-  controlID: 11
+  controlID: 98
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,8 +154,8 @@ MonoBehaviour:
     y: 0
     width: 202
     height: 364
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -206,8 +206,8 @@ MonoBehaviour:
     y: 0
     width: 603
     height: 364
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 104, y: 121}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -231,8 +231,8 @@ MonoBehaviour:
     y: 0
     width: 357
     height: 364
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -297,7 +297,7 @@ MonoBehaviour:
     height: 343
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
-  m_Stats: 1
+  m_Stats: 0
   m_SelectedSizes: 0e000000000000000400000005000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
@@ -313,7 +313,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoom: 0
@@ -325,18 +325,18 @@ MonoBehaviour:
       y: 17
       width: 599
       height: 326
-    m_Scale: {x: 0.6791667, y: 0.6791667}
-    m_Translation: {x: 299.5, y: 163}
+    m_Scale: {x: 0.74214363, y: 0.74214363}
+    m_Translation: {x: 299.5, y: 159.52818}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -440.9816
-      y: -240
-      width: 881.9632
-      height: 480
+      x: -403.5607
+      y: -214.95595
+      width: 807.1214
+      height: 439.26807
     m_MinimalGUI: 1
   m_defaultScale: 0.26247987
   m_TargetTexture: {fileID: 0}
@@ -373,20 +373,20 @@ MonoBehaviour:
     height: 343
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 86990000
-    m_LastClickedID: 39302
-    m_ExpandedIDs: 762affff642bffff3e2cffff482cffffa62dffffae2dffffb82dffffc62dffff5047ffff3c48ffff1649ffff2049ffff7e4affff864affff904affff9e4affff1453ffff0054ffffda54ffffe454ffff4256ffff4a56ffff5456ffff6256ffff24f8ffffc6fbffff000000001a330000d2330000fe33000034990000209a0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 625cfcff08faffffc6fbffff00000000702e0000882e0000de2e0000fa2e00001e3100009c31000010320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: imagencanvasTienda
-      m_OriginalName: imagencanvasTienda
+      m_Name: bala_papel(Clone)
+      m_OriginalName: bala_papel(Clone)
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13266
+      m_UserData: -520142
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -394,7 +394,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 7}
     m_SearchString: 
   m_ExpandedScenes:
-  - menu
+  - escena1
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -425,14 +425,14 @@ MonoBehaviour:
     width: 200
     height: 343
   m_SceneLighting: 0
-  lastFramingTime: 5854.07359503784
+  lastFramingTime: 4240.160643226361
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 52.718063, y: 34.810165, z: 0}
+    m_Target: {x: 0.0040278286, y: 999.97156, z: -102.90118}
     speed: 2
-    m_Value: {x: 52.718063, y: 34.810165, z: 0}
+    m_Value: {x: 0.0040278286, y: 999.97156, z: -102.90118}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -455,17 +455,17 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.07627777, y: -0.062185165, z: -0.004766354, w: -0.99514836}
+    m_Target: {x: -0.02396233, y: 0.97410846, z: -0.18723603, w: -0.12458058}
     speed: 2
-    m_Value: {x: 0.0762767, y: -0.06218429, z: -0.004766287, w: -0.99513435}
+    m_Value: {x: -0.02396186, y: 0.9740894, z: -0.18723236, w: -0.12457814}
   m_Size:
-    m_Target: 216.66997
+    m_Target: 2.4017181
     speed: 2
-    m_Value: 216.66997
+    m_Value: 2.4017181
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_LastSceneViewRotation: {x: 0.0019767743, y: 0.9657177, z: -0.2594871, w: 0.007204207}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
@@ -712,19 +712,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/escenas
+    - Assets/Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/escenas
+  - Assets/Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Norman\Documents\GitHub\cuicuicui\cui cui cui
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 123}
-    m_SelectedIDs: e8260000
-    m_LastClickedID: 9960
-    m_ExpandedIDs: 00000000ac2500006426000088260000ae260000942700005c290000642a0000ae32000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 111}
+    m_SelectedIDs: 94270000
+    m_LastClickedID: 10132
+    m_ExpandedIDs: 00000000ac2500006426000088260000ae26000094270000ba2700005c290000642a0000182d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -752,7 +752,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 283e0000
     m_LastClickedID: 15912
-    m_ExpandedIDs: 00000000ac2500006426000088260000ae260000942700005c290000642a0000ae320000
+    m_ExpandedIDs: 00000000ac2500006426000088260000ae260000942700005c290000642a0000182d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -858,9 +858,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 402
+    y: 456
     width: 1366
-    height: 304
+    height: 250
 --- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52

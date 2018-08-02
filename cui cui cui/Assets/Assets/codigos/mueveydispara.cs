@@ -32,6 +32,7 @@ public class mueveydispara : MonoBehaviour {
 	public Transform puntodelanzamiento2;
 	public Transform puntodelanzamiento3;
 
+	
 	double totalmovido;
 	double tiempo;
 	int limitedebalas;
@@ -148,7 +149,7 @@ public class mueveydispara : MonoBehaviour {
 
 		if(globalvariables.nbalas>0&&globalvariables.puededisparar==true){
 		//arma1
-		
+			
 			subebalas=false;
 			globalvariables.nbalas--;
 //		imagenbalas.rectTransform.sizeDelta=new Vector2(imagenbalas.rectTransform.sizeDelta.x,globalvariables.nbalas*25f);
