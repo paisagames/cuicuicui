@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/escenas/loadingscene.unity
+- path: Assets/escenas/historia.unity
   isLoaded: 1
   isActive: 1
