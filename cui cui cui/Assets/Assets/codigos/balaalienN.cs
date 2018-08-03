@@ -7,8 +7,7 @@ public class balaalienN : MonoBehaviour {
 //	public Text vidat;
 
 public MeshRenderer r1;
-public MeshRenderer r2;
-public MeshRenderer r3;
+
 	//public Image imagenvida;
 	float vida;
 	// Use this for initialization
@@ -30,8 +29,7 @@ public MeshRenderer r3;
 		//	vidat.text="vida:"+avanza.vida;//vidat.text="vida:"+shooteralien2.vida;
 //			imagenvida.rectTransform.sizeDelta = new Vector2(avanza.vida, 100f);
 			r1.enabled=false;
-			r2.enabled=false;
-			r3.enabled=false;
+			
 			//MeshRenderer meshrender=transform.GetComponent<MeshRenderer>();
 			//meshrender.enabled=false;
 		}
@@ -40,14 +38,7 @@ public MeshRenderer r3;
 			
 
 			r1.enabled=false;
-			r2.enabled=false;
-			r3.enabled=false;
-			//MeshRenderer meshrender=transform.GetComponent<MeshRenderer>();
-			//meshrender.enabled=false;
-
 			
-			//Renderer render=transform.GetComponent<Renderer>();
-		//	render.enabled=false;
 		}
 	}
 }

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class meshrenderbalaalien : MonoBehaviour {
 public MeshRenderer mr1;
-public MeshRenderer mr2;
-public MeshRenderer mr3;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,8 +18,7 @@ public MeshRenderer mr3;
 		if(other.tag=="render"){
 	
 		mr1.enabled=true;
-		mr2.enabled=true;
-		mr3.enabled=true;
+	
 	
 		}
 
@@ -29,14 +27,12 @@ public MeshRenderer mr3;
 		MeshRenderer render =transform.GetComponent<MeshRenderer>();
 		if(other.tag=="render"){
 		mr1.enabled=true;
-		mr2.enabled=true;
-		mr3.enabled=true;
+	
 
 		
 		}else{
 		mr1.enabled=false;
-		mr2.enabled=false;
-		mr3.enabled=false;}
+		}
 
 	}
 }
