@@ -22,6 +22,7 @@ public class canvascode2 : MonoBehaviour {
 		posicionTITULO=imagenTITULO.rectTransform.position;
 		posicionTIENDA=imagenTIENDA.rectTransform.position;
 		posicionREGRESA=imagenayuda2.rectTransform.position;
+		
 	}
 	
 	// Update is called once per frame
@@ -37,6 +38,7 @@ public class canvascode2 : MonoBehaviour {
 	public void tienda(){
 
 		//imagenTITULO.rectTransform.position=posicionTIENDA;
+		posicionTITULO=imagenTITULO.rectTransform.position;
 		imagenTIENDA.rectTransform.position=posicionTITULO;
 	}
 

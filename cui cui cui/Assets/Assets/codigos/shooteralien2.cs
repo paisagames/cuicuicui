@@ -23,10 +23,10 @@ public class shooteralien2 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 			switch(globalvariables.level){
-				case 1:tiempolevel=350;break;
-				case 2:tiempolevel=300;break;
-				case 3:tiempolevel=250;break;
-				case 4:tiempolevel=200;break;
+				case 1:tiempolevel=950;break;
+				case 2:tiempolevel=900;break;
+				case 3:tiempolevel=750;break;
+				case 4:tiempolevel=700;break;
 			}
 
 
