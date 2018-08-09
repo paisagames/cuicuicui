@@ -8,16 +8,12 @@ using UnityEngine.SceneManagement;
 
 public class ui : MonoBehaviour {
 
-	public Image fondiux;
-	//public Image touchleft;
-	//public Image touchright;
-
-//public Image imagenvida;
+	
 
 public AudioSource sonidomusica;
 public AudioSource disparosonido;
 
-public Image logo;
+
 public Image playimagenoriginal;
 public Button plaubutton;
 public Button pausebutton;
@@ -26,33 +22,24 @@ public Button pausebutton;
 	public Sprite imagenpausa;	
 	public Sprite imagenplay;
 	bool pausabool;
-	//public Button startbuton;
-	//public Image startimage;
 	
-	//public Text starttext;
-
-	//public Button instruccionesbuton;
-	//public Image instruccionesimagge;
-	//public Text instruccionestext;
 
 	public Button sonidobuton;
 	public Image sonidoimage;
 	public Text sonidotext;
 
-	public Button okb;
-	public Image okim;
-	public Text okt;
+
 
 
 	bool sonidob;
 	double doubletiempo;
 	bool booltiempo;
 
-	public Image gameoverimage;
+
 	public Image GObi;
 	public Button GObb;
 	public Text GObt;
-	public Image estassonlasinstruccioens;
+	
 
 
 	public Button menu2b;
@@ -90,10 +77,10 @@ public Button pausebutton;
 	}
 	public void startgame(){
 
-		fondiux.enabled=false;
+//		fondiux.enabled=false;
 		globalvariables.pausado=false;
 		globalvariables.nbalas=30;
-		logo.enabled=false;
+		//logo.enabled=false;
 		pausaimageoriginal.enabled=true;
 		pausabool=true;
 		globalvariables.velocidad=0.7f;
@@ -117,23 +104,9 @@ public Button pausebutton;
 		
 	}
 
-	public void instrucciones(){
+	
 
-		estassonlasinstruccioens.enabled=true;
-		okb.enabled=true;
-		okim.enabled=true;
-		okt.enabled=true;
-
-	}
-
-	public void okinstrucciones(){
-
-		estassonlasinstruccioens.enabled=false;
-		okb.enabled=false;
-		okim.enabled=false;
-		okt.enabled=false;
-
-	}
+	
 
 	public void sonido(){
 		if(sonidob==true){sonidob=false;sonidotext.text="Music OFF";
@@ -169,14 +142,10 @@ public Button pausebutton;
 		GObb.enabled=false;
 		GObi.enabled=false;
 		GObt.enabled=false;
-		gameoverimage.enabled=false;
-//		menu2b.enabled=false;
-//		menu2i.enabled=false;
-//		menu2t.enabled=false;
+	
+
 		globalvariables.velocidad=0.2f;
-		//instruccionesbuton.enabled=false;
-		//instruccionesimagge.enabled=false;
-		//instruccionestext.enabled=false;
+	
 		sonidobuton.enabled=false;
 		sonidoimage.enabled=false;
 		sonidotext.enabled=false;
@@ -184,8 +153,7 @@ public Button pausebutton;
 		pausaimageoriginal.enabled=true;
 		playimagenoriginal.enabled=false;
 		plaubutton.enabled=false;
-		//touchleft.enabled=true;
-		//touchright.enabled=true;
+	
 		booltiempo=true;
 	}
 	public void menup(){
@@ -202,9 +170,7 @@ public void playm(){
 		sonidobuton.enabled=false;
 		sonidoimage.enabled=false;
 		sonidotext.enabled=false;
-		//instruccionesbuton.enabled=false;
-		//instruccionesimagge.enabled=false;
-		//instruccionestext.enabled=false;
+	
 		pausabool=false;
 		globalvariables.velocidad=globalvariables.velocidadguardada;
 		
