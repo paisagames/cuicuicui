@@ -13,7 +13,7 @@ public Transform avion;
 	// Update is called once per frame
 	void Update () {
 		if(avion.position.z<transform.position.z){
-				transform.position=new Vector3(Random.Range(avion.position.x-0.4f,avion.position.x+0.4f),Random.Range(2f,8f),avion.position.z-120f);
+				transform.position=new Vector3(Random.Range(avion.position.x-0.4f,avion.position.x+0.4f),Random.Range(9.3f,10.3f),avion.position.z-120f);
 
 
 		}

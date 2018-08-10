@@ -13,9 +13,7 @@ public class gameover : MonoBehaviour {
 	public Text menut;
 	public Image menui;*/
 	// Use this for initialization
-	public Image reiniciarimage;
-	public Image menuimage;
-	public Image loadingimage;
+	
 	void Start () {
 		
 	}
@@ -42,20 +40,5 @@ public class gameover : MonoBehaviour {
 	}	
 	}
 
-	public void reiniciar(){
-		reiniciarimage.enabled=false;
-		menuimage.enabled=false;
-		loadingimage.enabled=true;
-		SceneManager.LoadScene("escena1");
-		avanza.vida=100f;
-
-	}
-	public void menum(){
-		avanza.vida=100f;
-		reiniciarimage.enabled=false;
-		menuimage.enabled=false;
-		loadingimage.enabled=true;
-		SceneManager.LoadScene("menu");
-		
-	}
+	
 }

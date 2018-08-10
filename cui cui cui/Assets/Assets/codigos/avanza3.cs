@@ -119,7 +119,7 @@ double resistenciaEscudo;
 	void OnTriggerEnter(Collider other){
 				if(other.tag=="star"){ 
 					
-			other.transform.position=new Vector3(Random.Range(transform.position.x-0.4f,transform.position.x+0.4f),Random.Range(0f,10f),transform.position.z-120f);
+			other.transform.position=new Vector3(Random.Range(transform.position.x-0.4f,transform.position.x+0.4f),Random.Range(8.5f,10f),transform.position.z-120f);
 			
 			globalvariables.puntos+=valormeteoro;
 			//privado++;
